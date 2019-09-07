@@ -1,0 +1,14 @@
+from googlesearch import search
+from random import randint
+import urllib.request
+import webbrowser
+
+def  pesquisa(tema_da_pesquisa,stop):
+     for url in search(tema_da_pesquisa, stop = stop):
+          print (url)
+          return url
+          #webbrowser.open(url)
+def hentai(url):
+    file_name = randint(0, 1000)
+    full_file_name = str(file_name) + '.png'
+    return urllib.request.urlretrieve(url,full_file_name)
